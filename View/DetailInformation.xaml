@@ -1,0 +1,50 @@
+﻿<Window x:Class="Test_Assignment.View.DetailInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_Assignment.View"
+        mc:Ignorable="d"
+        Title="DetailInformation" Height="300" Width="1100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Style="{StaticResource TextStyle}" HorizontalAlignment="Center" FontSize="35" Text="{Binding SelectedCurrency.Name}"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                <ColumnDefinition Width="0.8*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" FontSize="24" VerticalContentAlignment="Center">ID</Label>
+            <Label Grid.Row="1" FontSize="24" VerticalContentAlignment="Center">Symbol</Label>
+            <Label Grid.Row="2" FontSize="24" VerticalContentAlignment="Center">Supply</Label>
+            <Label Grid.Row="3" FontSize="24" VerticalContentAlignment="Center">Supply limit</Label>
+            
+            <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TextStyle}" FontSize="24" Text="{Binding SelectedCurrency.Id}"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource TextStyle}" FontSize="24" Text="{Binding SelectedCurrency.Symbol}"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource TextStyle}" FontSize="22" Text="{Binding SelectedCurrency.Supply}"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" Style="{StaticResource TextStyle}" FontSize="22" Text="{Binding SelectedCurrency.MaxSupply}"></TextBlock>
+
+            <Label Grid.Row="0" Grid.Column="2" FontSize="24" VerticalContentAlignment="Center">Market Cap (USD)</Label>
+            <Label Grid.Row="1" Grid.Column="2" FontSize="24" VerticalContentAlignment="Center">Price (USD)</Label>
+            <Label Grid.Row="2" Grid.Column="2" FontSize="24" VerticalContentAlignment="Center">Volume (USD 24 Hour)</Label>
+            <Label Grid.Row="3" Grid.Column="2" FontSize="24" VerticalContentAlignment="Center">Explorer</Label>
+
+            <TextBlock Grid.Row="0" Grid.Column="3" Style="{StaticResource TextStyle}" FontSize="24" Text="{Binding SelectedCurrency.MarketCapUSD}"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="3" Style="{StaticResource TextStyle}" FontSize="24" Text="{Binding SelectedCurrency.PriceUSD}"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="3" Style="{StaticResource TextStyle}" FontSize="24" Text="{Binding SelectedCurrency.VolumeUSD24Hr}"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="3" Style="{StaticResource TextStyle}" FontSize="24" Text="{Binding SelectedCurrency.Explorer}"></TextBlock>
+        </Grid>
+    </Grid>
+</Window>

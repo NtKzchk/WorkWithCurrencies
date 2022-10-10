@@ -1,0 +1,56 @@
+﻿<Application x:Class="Test_Assignment.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Test_Assignment"
+             StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Стиль для всех кнопок-->
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="OliveDrab"></Setter>
+                <Setter Property="BorderThickness" Value="3"></Setter>
+                <Setter Property="BorderBrush" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="28"></Setter>
+                <Setter Property="Margin" Value="28"></Setter>
+                <Setter Property="FontStyle" Value="Oblique"></Setter>
+                <Setter Property="FontFamily" Value="Ink Free"></Setter>
+                <Setter Property="FontWeight" Value="Black"></Setter>
+            </Style>
+            <!--Стиль для всех полей Label-->
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="40"></Setter>
+                <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                <Setter Property="Foreground" Value="Olive"></Setter>
+                <Setter Property="FontStyle" Value="Oblique"></Setter>
+                <Setter Property="FontFamily" Value="Ink Free"></Setter>
+                <Setter Property="FontWeight" Value="Black"></Setter>
+                <Setter Property="Margin" Value="5"></Setter>
+            </Style>
+            <!--Стиль для ListView-->
+            <Style TargetType="ListBox">
+                <Setter Property="FontSize" Value="24"></Setter>
+                <Setter Property="FontFamily" Value="Ink Free"></Setter>
+                <Setter Property="Margin" Value="2"></Setter>
+                <Setter Property="BorderBrush" Value="Black"></Setter>
+                <Setter Property="BorderThickness" Value="3"></Setter>
+            </Style>
+            <!--Стиль для всех полей для ввода или полей для отображения информации о работнике-->
+            <Style x:Key="TextStyle">
+                <Setter Property="TextBox.FontSize" Value="20"></Setter>
+                <Setter Property="TextBox.VerticalAlignment" Value="Center"></Setter>
+                <Setter Property="TextBox.Margin" Value="5"></Setter>
+                <Setter Property="TextBox.FontFamily" Value="Ink Free"></Setter>
+                <Setter Property="TextBox.VerticalAlignment" Value="Center"></Setter>
+                <Setter Property="TextBox.HorizontalAlignment" Value="Left"></Setter>
+            </Style>
+            <Style x:Key="ComboBoxStyle">
+                <Setter Property="TextBox.FontSize" Value="30"></Setter>
+                <Setter Property="TextBox.VerticalContentAlignment" Value="Center"></Setter>
+                <Setter Property="TextBox.Margin" Value="10"></Setter>
+                <Setter Property="TextBox.FontFamily" Value="Ink Free"></Setter>
+                <Setter Property="ComboBox.IsReadOnly" Value="False"></Setter>
+                <Setter Property="ComboBox.IsEditable" Value="True"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
